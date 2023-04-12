@@ -1,0 +1,40 @@
+body {
+  margin: 0px;
+  font-family: "Fira Sans", Arial, sans-serif;
+  color: #141414;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0px;
+}
+
+ul {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.subtitulo {
+  font-size: 8rem;
+  line-height: 1; /*Espacamento entre as linhas*/
+  text-transform: uppercase; /*Colocar todo em MAIUSCULO*/
+  word-break: break-all; /*Quebra a palavra*/
+  max-width: 4ch; /*4 caracteres (letras) no maximo*/
+}
+
+@media (max-width: 800px) {
+  .subtitulo {
+    font-size: 3rem;
+    text-transform: capitalize; /*Somente a 1 letra maiuscula*/
+    max-width: initial !important; /*Volta ao valor padrao de H2*/
+  }
+}

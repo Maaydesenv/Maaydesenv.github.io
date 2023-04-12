@@ -1,0 +1,42 @@
+/*Utilizar a unidade de medida rem somente para tamanho de fontes, ou tamanho de linhas*/
+
+/*TODOS OS ITENS DO HEADER CABEÇALHO*/
+.header {
+  max-width: 1200px; /*Para definir um tamanho maximo que os itens irão ir*/
+  margin: 0 auto; /*Para estar sempre centralizado*/
+  display: flex; /*Para ficar tudo na mesma linha*/
+  justify-content: space-between; /*Para ficar o mais longe um do outro lobo - Menu*/
+  align-items: center; /*Alinhando lobo com o menu*/
+  padding: 40px 20px; /*40px para cima e para baixo, 20px pros lados*/
+}
+
+/*Todos os itens do menu*/
+.header-menu {
+  display: flex; /*Para ficar tudo na mesma linha*/
+  gap: 20px; /*Espacamento entre os itens do header-menu*/
+  flex-wrap: wrap; /*Para quebrar caso a tela seja diminuida*/
+  justify-content: center; /*Justifica o conteudo ao centro quando esta minimizado*/
+}
+
+/*CADA ITEM DO MENU INDIVIDUALMENTE*/
+.header-menu a {
+  font-size: 1.125rem; /*Tamanho de texto do a 18px*/
+  line-height: 1.3rem; /*Altura de linha*/
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #141414;
+  display: block; /*Para pegar corretamente os valores de padding*/
+}
+
+/*CASO (se) A PAGINA COMECE A QUEBRAR OS ELEMENTOS*/
+@media (max-width: 800px) {
+  .header {
+    flex-direction: column; /*Muda a direçaõ que estava anteriormente para coluna*/
+    gap: 40px;
+    padding: 20px;
+  }
+  .header a {
+    background: #f5f5f5;
+    border-radius: 4px;
+  }
+}
